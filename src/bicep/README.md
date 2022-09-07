@@ -92,7 +92,7 @@ Parameter name | Required | Description
 `windowsVmStorageAccountType` | No       | The storage account type of the Windows Virtual Machine to Azure Bastion remote into. It defaults to "StandardSSD_LRS".
 `windowsNetworkInterfacePrivateIPAddressAllocationMethod` | No       | [Static/Dynamic] The public IP Address allocation method for the Windows virtual machine. It defaults to "Dynamic".
 `deployPolicy`   | No       | When set to "true", deploys the Azure Policy set defined at by the parameter "policy" to the resource groups generated in the deployment. It defaults to "false".
-`policy`         | No       | [NIST/IL5/CMMC] Built-in policy assignments to assign, it defaults to "NIST". IL5 is only available for AzureUsGovernment and will switch to NIST if tried in AzureCloud.
+`policy`         | No       | [NISTRev4/NISTRev5/IL5/CMMC] Built-in policy assignments to assign, it defaults to "NISTRev4". IL5 is only available for AzureUsGovernment and will switch to NISTRev4 if tried in AzureCloud.
 `deployDefender`     | No       | When set to "true", enables Microsoft Defender for Cloud for the subscriptions used in the deployment. It defaults to "false".
 `emailSecurityContact` | No       | Email address of the contact, in the form of john@doe.com
 <!-- markdownlint-enable MD034 -->

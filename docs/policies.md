@@ -47,7 +47,7 @@ az deployment sub create \
   --location eastus \
   --template-file mlz.bicep \
   --parameters deployPolicy=true \
-  --parameters policy=<one of 'CMMC', 'IL5', or 'NIST'>
+  --parameters policy=<one of 'CMMC', 'IL5', 'NISTRev4', or 'NISTRev5'>
 ```
 
 Or, you can apply policy after deploying MLZ:
@@ -57,7 +57,7 @@ az deployment group create \
   --resource-group <Resource Group to assign> \
   --name <original deployment name + descriptor> \
   --template-file ./src/bicep/modules/policy-assignment.bicep \
-  --parameters builtInAssignment=<one of 'CMMC', 'IL5', or 'NIST'> logAnalyticsWorkspaceName=<Log analytics workspace name> \
+  --parameters builtInAssignment=<one of 'CMMC', 'IL5', 'NISTRev4', or 'NISTRev5'> logAnalyticsWorkspaceName=<Log analytics workspace name> \
   --parameters logAnalyticsWorkspaceName=<Log Analytics Workspace Name> \
   --parameters logAnalyticsWorkspaceResourceGroupName=<Log Analytics Workspace Resource Group Name>
 ```
